@@ -16,4 +16,6 @@ var hero = React.createElement(Hero, { title: 'React',
                                        subtitle: 'Библиотека для создания пользовательских интерфейсов',
                                        imageUrl: 'https://facebook.github.io/react/img/logo.svg' });
 */
+//vmjkvnkrlvnslvs
+
 ReactDOM.render(container, document.getElementById('root'));//передаем значение по id
