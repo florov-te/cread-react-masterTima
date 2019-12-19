@@ -27,10 +27,31 @@ var Hero= React.createClass({
         );
     }
 });
-ReactDOM.render(<div>
-                     <Hero title='React'
-                     subtitle='что тут должно быть'
-                     urlImage='react.png'/>
+var App=React.createClass({
+    render:function(){
+        return(
+                <div>
+                    {this.props.heroues.map(function(hero){
+                    return <Hero key={hero.id} title={hero.title}
+                    subtitle={hero.subtitle}
+                    urlImage={hero.urlImage}/>;
+                    })}  
                 </div>
-                      
-,document.getElementById('root'));
+        );
+    }
+});
+var data=[
+    {
+        id:1,
+        title:'React',
+        subtitle:'что тут должно быть',
+        urlImage:'react.png'
+    },
+    {
+        id:2,
+        title:'Novoe',
+        subtitle:'я закончил все задания ',
+        urlImage:'angular.png'
+    }
+];
+ReactDOM.render(<App heroues={data}/>,document.getElementById('root'));
