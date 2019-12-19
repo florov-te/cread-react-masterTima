@@ -1,8 +1,11 @@
-/*var h1 = React.createElement('h1',null,'React')
-var div= React.createElement('div',null,h1)
-*/
-var jsx=
-<div>
-    <h1>React</h1>
-</div>;
-  ReactDOM.render(div, document.getElementById('root'))
+//5 задание 
+function hero(){
+    return(
+        <div className='container'>
+            <img src='https://facebook.github.io/react/img/logo.svg'/>
+            <h1>react</h1>
+        </div>
+    );
+}
+ReactDOM.render(React.createElement(hero, null), document.getElementById('root'))
+ReactDOM.render(<hero/>, document.getElementById('root'))
