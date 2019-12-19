@@ -1,9 +1,14 @@
-function Hero(){
+function Hero(props){
     return(
         <div className='container'>
-            <h1>React hihi</h1>
-            <p>что то пошло не так или так </p>
+            <h1>{props.title}</h1>
+            <p>{props.subtitle} </p>
+            <img src={props.urlImage}/>
         </div>
     );
 }
-ReactDOM.render(React.createElement(Hero,null),document.getElementById('root'));
+ReactDOM.render(<Hero title='React'
+                      subtitle='что тут должно быть'
+                      urlImage='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/200px-NASA_logo.svg.png'/>
+                      
+,document.getElementById('root'));
