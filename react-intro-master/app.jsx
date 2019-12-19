@@ -1,7 +1,8 @@
+/*var h1 = React.createElement('h1',null,'React')
+var div= React.createElement('div',null,h1)
+*/
 var jsx=
 <div>
-    <img src='https://png.cmtt.space/paper-media/6e/eb/6a/62fab81b990d7e.jpg'/>
-    <h1>react hi</h1>
-    <p>что то не так </p>
+    <h1>React</h1>
 </div>;
-ReactDOM.render(jsx,document.getElementById('root'))
+  ReactDOM.render(div, document.getElementById('root'))
