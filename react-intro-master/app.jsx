@@ -1,4 +1,11 @@
-
+var ImageCounter=function(props){
+    return(
+        <div className='image-counter' >
+          <div className='count'>{props.count}</div>
+          <img src={'img/'+props.urlImage} onClick={props.onCount}/>
+        </div>
+        )
+}
 var Hero= React.createClass({
     getInitialState:function(){
         return{
@@ -6,16 +13,16 @@ var Hero= React.createClass({
         }
     },
     clickClack:function(){
-        this.state.count+=1;
+       this.setState({count:this.state.count + 1}) ;
         console.log(this.state.count);
     },
     render:function(){
         return(
             <div className='container'>
-                <div className='count'>{this.state.count}</div>
+                <ImageCounter urlImage={this.props.urlImage} count={this.state.count} onCount={this.clickClack}/>
                 <h1>{this.props.title}</h1>
                 <p>{this.props.subtitle} </p>
-                <img src={this.props.urlImage} onClick={this.clickClack}/>
+                
             </div>
         );
     }
@@ -23,7 +30,7 @@ var Hero= React.createClass({
 ReactDOM.render(<div>
                      <Hero title='React'
                      subtitle='что тут должно быть'
-                     urlImage='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/200px-NASA_logo.svg.png'/>
+                     urlImage='react.png'/>
                 </div>
                       
 ,document.getElementById('root'));
