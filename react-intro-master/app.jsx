@@ -1,11 +1,9 @@
-//5 задание 
-function hero(){
+function Hero(){
     return(
         <div className='container'>
-            <img src='https://facebook.github.io/react/img/logo.svg'/>
-            <h1>react</h1>
+            <h1>React hihi</h1>
+            <p>что то пошло не так или так </p>
         </div>
     );
 }
-ReactDOM.render(React.createElement(hero, null), document.getElementById('root'))
-ReactDOM.render(<hero/>, document.getElementById('root'))
+ReactDOM.render(React.createElement(Hero,null),document.getElementById('root'));
